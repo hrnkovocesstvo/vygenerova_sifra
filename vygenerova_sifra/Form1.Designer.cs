@@ -73,6 +73,7 @@
             this.buttonEncode.TabIndex = 3;
             this.buttonEncode.Text = "Encode";
             this.buttonEncode.UseVisualStyleBackColor = true;
+            this.buttonEncode.Click += new System.EventHandler(this.buttonEncode_Click);
             // 
             // buttonDecode
             // 
@@ -83,6 +84,7 @@
             this.buttonDecode.TabIndex = 4;
             this.buttonDecode.Text = "Decode";
             this.buttonDecode.UseVisualStyleBackColor = true;
+            this.buttonDecode.Click += new System.EventHandler(this.buttonDecode_Click);
             // 
             // labelKey
             // 
