@@ -16,5 +16,10 @@ namespace vygenerova_sifra
         {
             InitializeComponent();
         }
+
+        private void textIn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
