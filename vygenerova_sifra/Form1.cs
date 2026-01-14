@@ -67,7 +67,7 @@ namespace vygenerova_sifra
             for (int i = 0; i < textOriginal.Length; i++)
             {
                 int o = +1;
-                if (Key.Length <= o) { o = 0; };
+                if (Key.Length <= o) { o = 0; }; ;
                 int kolikposun = Convert.ToInt32(Key[o]) - 96;
                 znak = Convert.ToInt32(textOriginal[i]);
                 kod = znak - kolikposun;
