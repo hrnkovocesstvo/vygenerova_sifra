@@ -29,6 +29,8 @@ namespace vygenerova_sifra
             //dis
             textIn.Text = textIn.Text.ToLower().Replace(" ", "");
             textKey.Text = textKey.Text.ToLower().Replace(" ", "");
+
+
             String Key = textKey.Text;
             String textOriginal = textIn.Text;
             String textZakodovano = "";
@@ -38,19 +40,23 @@ namespace vygenerova_sifra
 
             for (int i = 0; i < textOriginal.Length; i++)
             {
-                int kolikposun = (int)Key[i];
-                znak = textOriginal[i];
-                kod = znak + Convert.ToInt32(kolikposun);
-                if (kod > 122) kod -= 26;
-                textZakodovano += (char)kod;
+                int o =+ 1;
+                if(Key.Length <= o) { o =  0; };
+                int kolikposun = Convert.ToInt32(Key[o]) - 96;
+                znak = Convert.ToInt32(textOriginal[i]);
+                kod = znak + kolikposun;
+                if (kod > 122) { kod = kod - 26; };
+                textZakodovano += Convert.ToChar(kod);
             }
-            textOut.Text = textZakodovano; 
+            textOut.Text = textZakodovano;
         }
 
         private void buttonDecode_Click(object sender, EventArgs e)
         {
             textIn.Text = textIn.Text.ToLower().Replace(" ", "");
             textKey.Text = textKey.Text.ToLower().Replace(" ", "");
+
+
             String Key = textKey.Text;
             String textOriginal = textIn.Text;
             String textZakodovano = "";
@@ -60,11 +66,13 @@ namespace vygenerova_sifra
 
             for (int i = 0; i < textOriginal.Length; i++)
             {
-                int kolikposun = (int)Key[i];
-                znak = textOriginal[i];
-                kod = znak - Convert.ToInt32(kolikposun);
-                if (kod < 97) kod += 26;
-                textZakodovano += (char)kod;
+                int o = +1;
+                if (Key.Length <= o) { o = 0; };
+                int kolikposun = Convert.ToInt32(Key[o]) - 96;
+                znak = Convert.ToInt32(textOriginal[i]);
+                kod = znak - kolikposun;
+                if (kod > 122) { kod += 26; };
+                textZakodovano += Convert.ToChar(kod);
             }
             textOut.Text = textZakodovano;
         }
