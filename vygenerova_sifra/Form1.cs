@@ -58,7 +58,7 @@ namespace vygenerova_sifra
 
 
             String Key = textKey.Text;
-            String textOriginal = textIn.Text;
+            String textOriginal = textOut.Text;
             String textZakodovano = "";
             int znak;
             int kod;
@@ -74,7 +74,7 @@ namespace vygenerova_sifra
                 if (kod > 122) { kod += 26; };
                 textZakodovano += Convert.ToChar(kod);
             }
-            textOut.Text = textZakodovano;
+            textIn.Text = textZakodovano;
         }
     }
 }
