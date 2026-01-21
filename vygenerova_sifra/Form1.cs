@@ -71,7 +71,7 @@ namespace vygenerova_sifra
                 int kolikposun = Convert.ToInt32(Key[o]) - 96;
                 znak = Convert.ToInt32(textOriginal[i]);
                 kod = znak - kolikposun;
-                if (kod > 122) { kod += 26; };
+                if (kod < 97) { kod += 26; };
                 textZakodovano += Convert.ToChar(kod);
             }
             textIn.Text = textZakodovano;
